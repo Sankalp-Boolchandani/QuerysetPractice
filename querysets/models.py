@@ -13,4 +13,4 @@ class Restaurant(models.Model):
         ordering = ["-rating"]
 
     def __str__(self):
-        return f"{self.name} ({self.city})"
+        return f"{self.name}"

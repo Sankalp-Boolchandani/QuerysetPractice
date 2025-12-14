@@ -9,10 +9,19 @@ def run():
     # print(Restaurant.objects.filter(cuisine_type='Thai'))
 
 # get()
-    print(Restaurant.objects.get(name='Page'))
+    # print(Restaurant.objects.get(name='Page'))
 
 # exists()
-    print(Restaurant.objects.filter(name='Page').exists())
-    print(Restaurant.objects.filter(name='xcvbn').exists())
+    # print(Restaurant.objects.filter(name='Page').exists())
+    # print(Restaurant.objects.filter(name='xcvbn').exists())
 
-    pprint(connection.queries)
+# filter with and - done using a (,) comma
+    print(Restaurant.objects.filter(name='Page', cuisine_type='Med'))
+    print(Restaurant.objects.filter(cuisine_type='Med', name__startswith='A'))
+
+    ch='Chinese'
+    it='Italian'
+    xd=[ch, it]
+    print(Restaurant.objects.filter(cuisine_type__in=xd))
+
+    # pprint(connection.queries)

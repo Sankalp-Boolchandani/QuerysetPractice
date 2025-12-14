@@ -1,0 +1,2 @@
+- queryset always returns a list of objects
+- count() returns the number of objects returned 

@@ -9,6 +9,8 @@
     - returns true or false based on if the queryset is present or not
 - multiple filter()
     - many filter options can be executed by using just a comma(name=xd, type=abc)
+- exclude 
+    - returns all the the data in the queryset excluding the one condition specified - opposite of filter()
 
 
 # lookups

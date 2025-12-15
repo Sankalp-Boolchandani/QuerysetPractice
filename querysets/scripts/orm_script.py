@@ -16,12 +16,16 @@ def run():
     # print(Restaurant.objects.filter(name='xcvbn').exists())
 
 # filter with and - done using a (,) comma
-    print(Restaurant.objects.filter(name='Page', cuisine_type='Med'))
-    print(Restaurant.objects.filter(cuisine_type='Med', name__startswith='A'))
+    # print(Restaurant.objects.filter(name='Page', cuisine_type='Med'))
+    # print(Restaurant.objects.filter(cuisine_type='Med', name__startswith='A'))
 
     ch='Chinese'
     it='Italian'
     xd=[ch, it]
-    print(Restaurant.objects.filter(cuisine_type__in=xd))
+    # print(Restaurant.objects.filter(cuisine_type__in=xd))
+
+# exclude()
+    print(Restaurant.objects.exclude(cuisine_type='Chinese'))
+    print(Restaurant.objects.exclude(cuisine_type__in=xd))
 
     # pprint(connection.queries)

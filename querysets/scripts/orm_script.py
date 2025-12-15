@@ -29,9 +29,11 @@ def run():
     # print(Restaurant.objects.exclude(cuisine_type__in=xd))
 
 # lt/lte and gt/gte lookups
-    print(Restaurant.objects.filter(rating__gt=4))
-    print(Restaurant.objects.filter(rating__gte=4))
-    print(Restaurant.objects.filter(rating__lt=4))
-    print(Restaurant.objects.filter(rating__lte=4))
+    # print(Restaurant.objects.filter(rating__gt=4))
+    # print(Restaurant.objects.filter(rating__gte=4))
+    # print(Restaurant.objects.filter(rating__lt=4))
+    # print(Restaurant.objects.filter(rating__lte=4))
 
+    res=Restaurant.objects.filter(rating__range=(2,3))
+    print(res)
     # pprint(connection.queries)

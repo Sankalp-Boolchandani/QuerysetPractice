@@ -18,3 +18,4 @@
 - __in = used to check if a value is in a array or no
 - __lt/lte = less than/less than equal to: for filtering out values less than specified condition
 - __gt/gte = greater than/greater than equal to: for filtering out values greater than specified condition
+- __range = used to get results in the given range of the specified field, takes lower and upper limits respectively as args field__range=(lower, upper)

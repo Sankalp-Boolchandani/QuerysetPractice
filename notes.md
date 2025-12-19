@@ -19,6 +19,10 @@
         - mode - introducing ordering in the meta class of the model
     - Functions like Lower, Upper are also used for ordering
     - Lower: what this does is sorted the order by first converting the string into lower case and then sorting to avoid any ordering ambiguity based on ord(ascii) values of the alphabets
+- earliest and latest
+    - return a single object based dateTime field
+    - works as first and last
+    - Can also be set in Meta class by giving a field get_latest_by = 'xd' and then you dont need to mention it in the query
 
 
 # lookups

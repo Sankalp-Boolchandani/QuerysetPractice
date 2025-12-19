@@ -39,11 +39,15 @@ def run():
     # print(res)
 
 # order_by()
-    print(Restaurant.objects.order_by('name'))
-    print(Restaurant.objects.order_by('name').reversed())           # descending order
-    print(Restaurant.objects.order_by('-name'))           # also descending order using minus(-)
-    print(Restaurant.objects.order_by('name')[0])           # limit 1
-    print(Restaurant.objects.order_by('name')[:5])           # limit 5
-    print(Restaurant.objects.order_by('name')[2:5])           # limit 3 offset 2
-    print(Restaurant.objects.order_by(Lower('name')))           # notes
+    # print(Restaurant.objects.order_by('name'))
+    # print(Restaurant.objects.order_by('name').reversed())           # descending order
+    # print(Restaurant.objects.order_by('-name'))           # also descending order using minus(-)
+    # print(Restaurant.objects.order_by('name')[0])           # limit 1
+    # print(Restaurant.objects.order_by('name')[:5])           # limit 5
+    # print(Restaurant.objects.order_by('name')[2:5])           # limit 3 offset 2
+    # print(Restaurant.objects.order_by(Lower('name')))           # notes
+
+# earliest and latest()
+    Restaurant.objects.earliest('date_opening')
+    Restaurant.objects.latest('date_opening')
     # pprint(connection.queries)

@@ -2,6 +2,7 @@ from ..models import Restaurant
 from django.db import connection
 from pprint import pprint
 from django.db.models.functions import Lower 
+from django.db.models import *
 
 def run():
     # print(Restaurant.objects.count())
@@ -48,6 +49,17 @@ def run():
     # print(Restaurant.objects.order_by(Lower('name')))           # notes
 
 # earliest and latest()
-    Restaurant.objects.earliest('date_opening')
-    Restaurant.objects.latest('date_opening')
-    # pprint(connection.queries)
+    # Restaurant.objects.earliest('date_opening')
+    # Restaurant.objects.latest('date_opening')
+
+# aggregate
+    Restaurant.objects.aggregate(Avg('price'))
+    Restaurant.objects.aggregate(
+    total=Sum('price'),
+    average=Avg('price'),
+    highest=Max('price'),
+    lowest=Min('price'),
+    count=Count('id')
+    )
+    # Model.objects.aggregate(name_of_aggregation = Func('field_to_applied'))
+    pprint(connection.queries)

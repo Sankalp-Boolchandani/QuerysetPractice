@@ -11,6 +11,14 @@
     - many filter options can be executed by using just a comma(name=xd, type=abc)
 - exclude 
     - returns all the the data in the queryset excluding the one condition specified - opposite of filter()
+- order_by()
+    - order_by is used to order the queryset based on the param passed
+    - by default django orders based on the primary key of the model
+    - ordering can be done either using queryset or the model itself. 
+        - queryset - Restaurant.objects.order_by('xd')
+        - mode - introducing ordering in the meta class of the model
+    - Functions like Lower, Upper are also used for ordering
+    - Lower: what this does is sorted the order by first converting the string into lower case and then sorting to avoid any ordering ambiguity based on ord(ascii) values of the alphabets
 
 
 # lookups
